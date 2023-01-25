@@ -1,4 +1,8 @@
+
+
 const express = reuqire("express");
+
+//creating router object to be used in server.js
 const router = express.Router();
 
 //setting up the initial route for the api reuest meant for goals
