@@ -1,14 +1,15 @@
 
-const GoalController = require("../controllers/goalController");
-const express = reuqire("express");
-const router = express.Router();
+import { getGoals, setGoals, deleteGoals } from "../controllers/goalController";
+import { Router } from "express";
+
+const router = Router();
 
 router.route("/")
-    .get(GoalController.getGoals)
-    .post(GoalController.setGoals);
+    .get(getGoals)
+    .post(setGoals);
 
 router.route("/:id")
-    .put(GoalController.setGoals)
-    .delete(GoalController.deleteGoals);
+    .put(setGoals)
+    .delete(deleteGoals);
 
-module.exports = router;
+export default router;
