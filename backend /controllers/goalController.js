@@ -16,7 +16,8 @@ class GoalController{
             response.status(200).json({"command" : "get goal"});
         }else{
             console.log(`No request body found`);
-            response.status(400).json({"command" : "request body not found"});
+            response.status(400)
+            throw new Error("No request body found please add a text field");
         }
 
     }
