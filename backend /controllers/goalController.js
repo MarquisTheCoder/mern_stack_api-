@@ -31,11 +31,11 @@ class GoalController{
     })
 
     changeGoal = asyncHandler((request, response) => {
-        response.status(200).json({"command": `changing goal ${request.param.id}`});
+        response.status(200).json({"command": `changing goal ${request.params.id}`});
     })
 
     deleteGoal = asyncHandler((request, response) => {
-        response.status(200).json({"command" : `deleting goal ${request.param.id}`});
+        response.status(200).json({"command" : `deleting goal ${request.params.id}`});
     })
 }
 
