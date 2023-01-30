@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(errorHandler);
 app.use("/api/goals", require("./routes/goalRoutes"));
 
+//determining which port we are running our local server on
 app.listen(port, () => console.log(`server starting localhost@${port}`));
 
 

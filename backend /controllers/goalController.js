@@ -3,11 +3,13 @@ const asyncHandler = require("express-async-handler");
 
 //creating a controller class to contain the controller for 
 //each route contained in goalRoutes.js 
+
 class GoalController{
 
     //theses four functions represent the for common utilities of a
     //REST API C.R.U.D( create, read, update, delete)
 
+    
      getGoals = asyncHandler(async (request, response) => {
         if(request.body.text){
 
