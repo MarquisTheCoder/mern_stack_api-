@@ -1,11 +1,14 @@
 
 
 //setting up a basic express server
-const express = require("express");
+const connectDatabase = require("./configuration/db");
 const {errorHandler} = require("./middleware/error");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5000;
+const express = require("express");
+const colors = require("colors");
 
+connectDatabase();
 
 const app = express();
 
