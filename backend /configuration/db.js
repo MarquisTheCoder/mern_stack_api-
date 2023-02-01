@@ -1,5 +1,7 @@
 const mongoose = require("mongoose")
 
+mongoose.set('strictQuery', false);
+
 const connectDatabase = async () => {
     try {
         let connect = await mongoose.connect(process.env.MONGO_URI);
